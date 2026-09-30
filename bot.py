@@ -16,17 +16,17 @@ async def saludo(ctx):
 @bot.command()
 async def suma(ctx, num1:float, num2:float):
     resultado = num1 + num2
-    await ctx.send(f"El resultado de la suma es: {resultado}")
+    await ctx.send(f"El resultado de la suma de {num1} y {num2} es: {resultado}")
 
 @bot.command()
 async def resta(ctx, num1:float, num2:float):
     resultado = num1 - num2
-    await ctx.send(f"El resultado de la resta es: {resultado}")
+    await ctx.send(f"El resultado de la resta de {num1} y {num2} es: {resultado}")
 
 @bot.command()
 async def multiplicacion(ctx, num1:float, num2:float):
     resultado = num1 * num2
-    await ctx.send(f"El resultado de la multiplicacion es: {resultado}")
+    await ctx.send(f"El resultado de la multiplicacion de {num1} y {num2} es: {resultado}")
 
 @bot.command()
 async def division(ctx, num1:float, num2:float):
@@ -34,7 +34,11 @@ async def division(ctx, num1:float, num2:float):
         print("No podemos dividir por cero la division, por favor elejir otro numero......")
     else:
         resultado = num1 / num2
-        await ctx.send(f"El resultado de la division es: {resultado}")
+        await ctx.send(f"El resultado de la division de {num1} y {num2} es: {resultado}")
+
+@bot.command()
+async def comandos(ctx):
+    print("para usar los comandos tienes que usar el signo de ! y luego el comando junto, por ejemplos !saludo .  En otros comandos como de la suma a la division, tienes que poner el comando y luego los 2 numeros separados, para usar la ia es !ia (pregunta)")
 
 @bot.command()
 async def ia(ctx,*,pregunta):
